@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file name="__ia_thumb.jpg" source="original">
+    <mtime>1636189760</mtime>
+    <size>10871</size>
+    <format>Item Tile</format>
+    <rotation>0</rotation>
+    <md5>66c7d3f815cf5e6214df9eb7c106ca98</md5>
+    <crc32>52fc3140</crc32>
+    <sha1>b3242cfe89f8650e57101c34e792025eb601740f</sha1>
+  </file>
+  <file name="elle.afpk" source="derivative">
+    <format>Columbia Peaks</format>
+    <original>elle.wav</original>
+    <mtime>1636189738</mtime>
+    <size>3032</size>
+    <md5>a395191e4e3e5c887c575ebfe02b3a56</md5>
+    <crc32>a6f27378</crc32>
+    <sha1>d36739a56c981ac7e9cab0e6b3034f59b04dcbcc</sha1>
+  </file>
+  <file name="elle.flac" source="derivative">
+    <format>Flac</format>
+    <original>elle.wav</original>
+    <mtime>1636189664</mtime>
+    <size>1107594</size>
+    <md5>b7ad419022f43bba5162fe33b748a691</md5>
+    <crc32>2f747694</crc32>
+    <sha1>3e4403a0068bc43f5f85c3fc49fcfb48b5e08a17</sha1>
+    <length>22</length>
+  </file>
+  <file name="elle.mp3" source="derivative">
+    <creator>tracey</creator>
+    <title>my little monster</title>
+    <track>01</track>
+    <bitrate>128</bitrate>
+    <format>VBR MP3</format>
+    <original>elle.wav</original>
+    <mtime>1636189648</mtime>
+    <size>419814</size>
+    <md5>1490151eb060839ab85cb7b0e2738487</md5>
+    <crc32>6244fcf6</crc32>
+    <sha1>defa6e3aa90b997a0aea040a40dcce4df78bfd51</sha1>
+    <length>22.05</length>
+  </file>
+  <file name="elle.png" source="derivative">
+    <format>PNG</format>
+    <original>elle.wav</original>
+    <mtime>1636189678</mtime>
+    <size>16539</size>
+    <md5>964ed393f1528369fcc895a55d21b1f6</md5>
+    <crc32>8bb99828</crc32>
+    <sha1>70b88d20de7bf1127bc5e20aada9d0646b812c3f</sha1>
+  </file>
+  <file name="elle.wav" source="original">
+    <title>my little monster</title>
+    <format>WAVE</format>
+    <md5>9a2fabe4c48b6fabe614b972bb80ef5f</md5>
+    <track>01</track>
+    <mtime>1217133568</mtime>
+    <size>1940492</size>
+    <crc32>a97da40b</crc32>
+    <sha1>2c7118a23c3fa0dd2ff53b7ab3decbd72877298d</sha1>
+    <length>22</length>
+    <external-identifier>urn:acoustid:unknown</external-identifier>
+    <creator>tracey</creator>
+    <height>0</height>
+    <width>0</width>
+  </file>
+  <file name="elle_spectrogram.png" source="derivative">
+    <format>Spectrogram</format>
+    <original>elle.wav</original>
+    <mtime>1636189687</mtime>
+    <size>304703</size>
+    <md5>fa91996608be8b8eba5caa0d76726431</md5>
+    <crc32>c13d8298</crc32>
+    <sha1>5dba70b686ce391335bd7bf3aa7c1b6b079e483e</sha1>
+  </file>
+  <file name="ellepurr.gif" source="original">
+    <format>Item Image</format>
+    <title>elle</title>
+    <mtime>1251578409</mtime>
+    <size>30252</size>
+    <md5>c29a23e429aa09768b55f740a84779c9</md5>
+    <crc32>79885ccc</crc32>
+    <sha1>fbd1578d84bb8d31fbf9550e09f3f080b27f3c81</sha1>
+  </file>
+  <file name="ellepurr_archive.torrent" source="metadata">
+    <btih>c8175cfbcf0ae0bb188e71efaa8dfd3276714b5b</btih>
+    <mtime>1636189751</mtime>
+    <size>2867</size>
+    <md5>dce00c3b0dd3d395ca25a8f169b068ae</md5>
+    <crc32>05dbab91</crc32>
+    <sha1>3b955c602256a302c14355f840c0c0cc2fb46ca6</sha1>
+    <format>Archive BitTorrent</format>
+  </file>
+  <file name="ellepurr_files.xml" source="metadata">
+    <format>Metadata</format>
+    <md5>449b3e4d31b20042a4876ef840f3eceb</md5>
+    <summation>md5</summation>
+  </file>
+  <file name="ellepurr_meta.xml" source="metadata">
+    <format>Metadata</format>
+    <mtime>1636189745</mtime>
+    <size>768</size>
+    <md5>f635f97222fd74356eb88de340005e66</md5>
+    <crc32>e7310391</crc32>
+    <sha1>7ad1aff90b297d67b61490792cb5e39bec7cb550</sha1>
+  </file>
+  <file name="ellepurr_reviews.xml" source="metadata">
+    <mtime>1274421365</mtime>
+    <size>602</size>
+    <md5>76db6c7f9c018199bd19f0bb1eb272a1</md5>
+    <crc32>e69c6277</crc32>
+    <sha1>cbbc539d280a4b9829a689e243624a11f9aed3df</sha1>
+    <format>Metadata</format>
+  </file>
+  <file name="ellepurr_rules.conf" source="original">
+    <mtime>1519549263</mtime>
+    <format>Derivation Rules</format>
+    <md5>d41d8cd98f00b204e9800998ecf8427e</md5>
+    <size>0</size>
+    <crc32>00000000</crc32>
+    <sha1>da39a3ee5e6b4b0d3255bfef95601890afd80709</sha1>
+  </file>
+</files>

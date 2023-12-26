@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews itemIdentifier="stairs">
+  <review>
+    <reviewtitle>test review (please to ignore)</reviewtitle>
+    <reviewbody>Test item, please stand bai.
+
+[NOTE this is a &lt;b&gt;test item&lt;/b&gt; by the webmaster so please ignore it.  this allows a better website, so as such we have no plans to remove it at this moment...
+
+--tracey, webmistress</reviewbody>
+    <stars>0</stars>
+    <reviewer>tracey pooh</reviewer>
+    <reviewdate>2020-12-03 04:59:59</reviewdate>
+    <createdate>2005-02-04 22:20:24</createdate>
+    <reviewer_itemname>@tracey_pooh</reviewer_itemname>
+  </review>
+  <review>
+    <reviewbody>Clean up this stuff, what's the point of having junk online. Anyone can leave their cheap digital camera on for four seconds at a time and upload it in 3000kbps quality 20fps and show turning around in their home.</reviewbody>
+    <reviewtitle>Clean it up please</reviewtitle>
+    <stars>1</stars>
+    <reviewer>Madhavananda</reviewer>
+    <createdate>2005-05-16 08:20:01</createdate>
+    <reviewdate>2005-05-16 08:20:01</reviewdate>
+  </review>
+  <review>
+    <reviewbody>Crap like this keeps the real films from getting a chance to be seen.  Thank God i have earned enough money, to start placing my films at other websites such as atom films, videoart.net, and hopefully the Cannes Film Festival.
+If not i know I have earned enough to start placing my films at other legitimate sites.</reviewbody>
+    <reviewtitle>A reply to for a betteer website to the webmaster.</reviewtitle>
+    <stars>1</stars>
+    <reviewer>Darrell Wright</reviewer>
+    <createdate>2005-05-18 04:18:09</createdate>
+    <reviewdate>2005-05-18 04:18:09</reviewdate>
+  </review>
+  <review>
+    <reviewbody>Congratulation, ignore the haters, composition perfect, subject matter relevant, camera motion fluid and free. This stairway makes the old Zeppelin song sound like mary had a little lamb.</reviewbody>
+    <reviewtitle>Best steps I have ever seen taken</reviewtitle>
+    <reviewer>NoiseCollector</reviewer>
+    <reviewdate>2010-07-25 13:32:01</reviewdate>
+    <createdate>2010-07-25 13:32:01</createdate>
+    <stars>5</stars>
+  </review>
+  <review>
+    <reviewbody>testing the linking of the name to user acct.
+-brewster</reviewbody>
+    <reviewtitle>testing</reviewtitle>
+    <reviewer>brewster</reviewer>
+    <reviewer_itemname>@brewster</reviewer_itemname>
+    <reviewdate>2017-10-06 21:26:57</reviewdate>
+    <createdate>2017-10-06 21:26:57</createdate>
+    <stars>0</stars>
+  </review>
+  <info>
+    <num_reviews>5</num_reviews>
+    <avg_rating>2.33</avg_rating>
+  </info>
+</reviews>
