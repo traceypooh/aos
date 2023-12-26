@@ -10,36 +10,69 @@ let LUNR
 let metadata_keys = new Set()
 
 async function main() {
+  const q = cgiarg('q')
+  if (q === '') return // nothing to do
+
+  // get a dir listing of the top dir (typically /items/)
+  // so we can know what item directories we should index to our lunr JS search
   const ids = [...(await (await fetch(TOP)).text()).matchAll(/href="([^"]+)"/g)].map((e) => (e[1].startsWith('https://') ? null : e[1].replace(TOP, '').replace(/^\/+/, '').replace(/\/+$/, ''))).filter((e) => !!e && e !== 'items')
   log({ ids })
 
+  // fetch each item's _meta.xml file
   const docs = []
+  const id2docnum = {}
   for (const id of ids) {
     const xml = await (await fetch(`${TOP}${id}/${id}_meta.xml`)).text()
 
     // eslint-disable-next-line no-use-before-define
     const kvs = xml_to_map(xml)
-    kvs.url = `${TOP}${id}`
+    kvs.id = id
+    id2docnum[id] = docs.length
     docs.push(kvs)
+    // maintain a list of all unique _meta.xml top-level name elements are found
+    // (so we can index them all, with their values)
     metadata_keys = new Set([...metadata_keys, ...new Set(Object.keys(kvs))])
   }
-
   log({ metadata_keys })
+
+  // index all the documents into our search
   // eslint-disable-next-line no-use-before-define
-  index(docs)
+  search_index(docs)
 
 
-  const q = cgiarg('q')
-  if (q)
-    document.write(`<pre>${JSON.stringify(LUNR.search(q), null, 2)}</pre>`)
+  // search for the query and dump results/info to the page
+  const hits = LUNR.search(q)
+  let htm = '<h1>Search results:</h1>'
+  for (const hit of hits) {
+    const id = hit.ref
+    htm += `
+      <div class="card" style="">
+        <a href="${TOP}${id}">
+          <img class="card-img-top" src="${TOP}${id}/__ia_thumb.jpg"><br>
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="${TOP}${id}">
+              ${docs[id2docnum[id]].title ?? ''}
+            </a>
+          </h5>
+          <p class="card-text">
+            ${docs[id2docnum[id]].description ?? ''}
+          </p>
+        </div>
+      </div>`
+  }
+  htm += `<hr>Search info:<pre>${JSON.stringify(hits, null, 2)}</pre>`
+  document.querySelector('body').innerHTML = htm
 }
 
 
-function index(docs) {
+function search_index(docs) {
   // Builds the index so Lunr can search it.  The `ref` field will hold the URL
-  // to the page/post.  title, excerpt, and body will be fields searched.
+  // to the page/post.
+  // All fields/keys found in item _meta.xml will be fields that get searched.
   LUNR = lunr(function adder() {
-    this.ref('url')
+    this.ref('id')
     for (const key of [...metadata_keys])
       this.field(key)
 
