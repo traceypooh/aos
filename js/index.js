@@ -4,7 +4,7 @@ import { log, warnfull } from 'https://av.prod.archive.org/js/util/log.js'
 import cgiarg from 'https://av.prod.archive.org/js/util/cgiarg.js'
 
 
-const TOP = '/items/'
+const TOP = location.pathname === '/' ? '/items/' : '/aos/items/'
 
 let LUNR
 let metadata_keys = new Set()
