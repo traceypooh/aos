@@ -10,7 +10,7 @@ let LUNR
 let metadata_keys = new Set()
 
 async function main() {
-  const ids = [...(await (await fetch(TOP)).text()).matchAll(/href="([^"]+)"/g)].map((e) => (e[1].startsWith(TOP) ? e[1].replace(TOP, '').replace(/^\/+/, '').replace(/\/+$/, '') : null)).filter((e) => !!e)
+  const ids = [...(await (await fetch(TOP)).text()).matchAll(/href="([^"]+)"/g)].map((e) => (e[1].startsWith('https://') ? null : e[1].replace(TOP, '').replace(/^\/+/, '').replace(/\/+$/, ''))).filter((e) => !!e && e !== 'items')
   log({ ids })
 
   const docs = []
