@@ -7,6 +7,17 @@ import Dexie from 'https://esm.archive.org/dexie'
 
 const TOP = location.pathname === '/' ? '/items/' : '/aos/items/'
 
+const HEADER = `
+<link href="https://esm.archive.org/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<style>
+  body { padding:50px; }
+  .card {
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+  }
+</style>
+`
 
 class AOS {
   constructor() {
@@ -19,16 +30,7 @@ class AOS {
     const q = cgiarg('q')
     if (q === '') {
       document.querySelector('body').innerHTML = `
-<link href="https://esm.archive.org/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<style>
-  body { padding:50px; }
-  .card {
-    max-width: 300px;
-    display: inline-block;
-    vertical-align: top;
-  }
-</style>
-
+${HEADER}
 <h1>
   Welcome to Archive OS
 </h1>
@@ -74,7 +76,7 @@ class AOS {
 
     // search for the query and dump results/info to the page
     const hits = this.lunr.search(q)
-    let htm = '<h1>Search results:</h1>'
+    let htm = `${HEADER} <h1>Search results:</h1>`
     for (const hit of hits) {
       const id = hit.ref
       htm += `
