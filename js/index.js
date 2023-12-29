@@ -17,7 +17,37 @@ class AOS {
 
   async main() {
     const q = cgiarg('q')
-    if (q === '') return // nothing to do
+    if (q === '') {
+      document.querySelector('body').innerHTML = `
+<link href="https://esm.archive.org/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<style>
+  body { padding:50px; }
+  .card {
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+  }
+</style>
+
+<h1>
+  Welcome to Archive OS
+</h1>
+
+<hr>
+
+
+<h2>Search:</h2>
+<form>
+  <input type="text" name="q" placeholder="enter text to search item metadata" size="50"/>
+  <input type="submit" class="btn btn-sm btn-primary"/>
+</form>
+
+
+<h2>Browse:</h2>
+<a href="items/">items/</a>
+`
+      return
+    }
 
     // get a dir listing of the top dir (typically /items/)
     // so we can know what item directories we should index to our lunr JS search
@@ -100,6 +130,7 @@ class AOS {
 
       for (const [id, metadata] of Object.entries(this.docs))
         await db.items.add({ id, metadata })
+        /* eslint-disable-next-line no-empty */ // deno-lint-ignore no-empty
     } catch {}
 
     await db.open()
