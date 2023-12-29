@@ -2,6 +2,7 @@ import lunr from 'https://esm.archive.org/lunr'
 import XMLMapping from 'https://esm.archive.org/xml-mapping'
 import { log, warnfull } from 'https://av.prod.archive.org/js/util/log.js'
 import cgiarg from 'https://av.prod.archive.org/js/util/cgiarg.js'
+import Dexie from 'https://esm.archive.org/dexie'
 
 
 const TOP = location.pathname === '/' ? '/items/' : '/aos/items/'
@@ -39,6 +40,7 @@ class AOS {
     // index all the documents into our search
     this.search_index()
 
+    // await this.store()
 
     // search for the query and dump results/info to the page
     const hits = this.lunr.search(q)
@@ -83,6 +85,26 @@ class AOS {
         this.add(doc)
     })
     warnfull(this.lunr)
+  }
+
+
+  async store() {
+    const db = new Dexie('aosDB')
+    db.version(1).stores({
+      items: 'id,metadata',
+      lunr: 'lunr',
+    })
+
+    try { // xxx
+      await db.lunr.add({ lunr: JSON.stringify(this.lunr) })
+
+      for (const [id, metadata] of Object.entries(this.docs))
+        await db.items.add({ id, metadata })
+    } catch {}
+
+    await db.open()
+    const xxx = await db.items.where('id').equals('commute').toArray()
+    log({ xxx })
   }
 
 
