@@ -1,15 +1,15 @@
-import lunr from 'https://esm.archive.org/lunr'
-import XMLMapping from 'https://esm.archive.org/xml-mapping'
+import lunr from 'https://esm.ext.archive.org/lunr@2.3.9'
+import XMLMapping from 'https://esm.ext.archive.org/xml-mapping@1.7.2'
 import { log, warnfull } from 'https://av.prod.archive.org/js/util/log.js'
 import cgiarg from 'https://av.prod.archive.org/js/util/cgiarg.js'
-import Dexie from 'https://esm.archive.org/dexie'
+import Dexie from 'https://esm.ext.archive.org/dexie@4.0.10'
 
 
 const ITEMS = location.pathname === '/' ? '/items/' : '/aos/items/'
 const TOP = location.pathname === '/' ? '/' : '/aos/'
 
 const HEADER = `
-<link href="https://esm.archive.org/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://esm.ext.archive.org/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <style>
   body { padding:50px; }
   .card {
