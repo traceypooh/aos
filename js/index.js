@@ -1,7 +1,7 @@
 import lunr from 'https://esm.ext.archive.org/lunr@2.3.9'
 import XMLMapping from 'https://esm.ext.archive.org/xml-mapping@1.7.2'
-import { log, warnfull } from 'https://av.prod.archive.org/js/util/log.js'
-import cgiarg from 'https://av.prod.archive.org/js/util/cgiarg.js'
+import { log, warnfull } from 'https://av.archive.org/js/util/log.js'
+import cgiarg from 'https://av.archive.org/js/util/cgiarg.js'
 import Dexie from 'https://esm.ext.archive.org/dexie@4.0.10'
 
 
@@ -172,7 +172,7 @@ ${HEADER}
 
     document.querySelector('details-page').mdapi = md
 
-    await import('https://av.prod.archive.org/js/details-page.js')
+    await import('https://av.archive.org/js/details-page.js')
 
 
     const e2 = document.createElement('h2')
@@ -222,7 +222,7 @@ ${HEADER}
   }
 
 
-  // (Modified lightly from https://av.prod.archive.org/js/util/files-xml.js )
+  // (Modified lightly from https://av.archive.org/js/util/files-xml.js )
   /**
    * Parses item XML file to JSON object.  Expected to be key/val like (eg: _meta.xml)
    * or array of key/vals (eg: _files.xml)
